@@ -10,3 +10,6 @@ java使用Thread类代表线程，所有的线程对象都必须是Thread或者�
 1：定义Runnable接口的实现类，并重写它的Run方法，run方法同样是该线程的执行体！
 2：创建Runnable实现类的实例，并将此实例作为Thread的target创建一个Thread对象，该Thread对象才是真正的线程对象！
 3：调用start方法启动该线程
+
+采用Ruunable接口的方式创建多个线程可以共享线程类的实例变量，这是因为在这种方式下，程序创建的Runnable对象只是线程的target，
+而多个线程可以共享一个target，所以多个线程可以共享一个实例变量！
