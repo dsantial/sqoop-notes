@@ -22,3 +22,6 @@ java使用Thread类代表线程，所有的线程对象都必须是Thread或者�
 为了测试某个线程是否死亡，可以调用该线程的isAlive方法，当线程处于就绪，运行，阻塞三种状态时，将返回true；当线程处于新建，死亡两种状态时返回为false。
 
 不要试图对一个已经死亡的线程调用start方法让它重新启动，死亡后的线程无法作为线程使用。
+
+Runnable对象作为Thread对象的target，Runnable实现类里面包含run方法仅仅作为执行体。也就是说Thread类的作用是把run方法包装成线程的执行体。
+实际运行的线程对象依然是Thread实例，只是该Thread线程负责执行其target的run方法。
